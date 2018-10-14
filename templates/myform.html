@@ -1,0 +1,35 @@
+<html>
+<head> <title> publish page</title>
+
+    <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery-1.10.2.js"></script>
+    
+    <script>
+    $(function() {
+        $( ".any_custom_class_name" ).datepicker();
+    });
+    </script>
+
+
+</head>
+
+<body>
+	<form action="." method ="POST">
+	{% csrf_token %}
+      <table>
+      	
+      {{form.as_table}}
+
+      </table>
+
+
+    <p><input type="submit" value ="submitting"></p>
+	</form>
+
+
+
+</body>
+
+
+</html>

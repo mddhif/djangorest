@@ -1,0 +1,21 @@
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Page</title>     
+    <!-- FIRST CHANGE HERE, swapping the order of the script elements -->
+    <script type="text/javascript" src="mootools-yui-compressed.js"></script>
+    <script type="text/javascript" src="datepicker.js"></script>      
+    <link type="text/css" rel="stylesheet" href="datepicker.css">
+ </head>
+  <body>
+   <label>Datepicker starting at and allowing no value:</label>
+   <input name='date_allow_empty' type='text' value='' class='date picker' />
+   <!-- SECOND CHANGE HERE, moving your script to *after* the elements it operates on -->
+   <script type="text/javascript">           
+            new DatePicker('.picker', {
+     pickerClass: 'datepicker ',
+     allowEmpty: true
+     });           
+   </script>        
+  </body>
+</html>

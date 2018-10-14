@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+	<title>Search {% if q %} Results {% endif%}</title>
+</head>
+<body>
+<h1>Search</h1>
+
+<form action="." method="GET">
+<label for="q">search :</label>
+<input type="text" name="yq" value="{{ yquery | escape}}">
+<input type="text" name="mq" value="{{ mquery | escape}}">
+<input type ="submit" value="searching">
+<input type="date" name="flight">
+<input type="submit">	
+
+
+
+</form>
+
+{% if q %}
+<h2> resuls for  "{{yq|escape}}":</h2>
+
+{{printed}}
+{% if r  %}
+<ul> {% for book in r %}
+  <li>{{book|escape}}</li>
+  {%endfor%}
+
+</ul>
+
+{%else%}
+<p> no books found</p>
+{%endif%}
+{%endif%}
+</body>
+</html>
